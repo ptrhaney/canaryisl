@@ -107,7 +107,7 @@ require([
 
   // define the earthquakes layer
   const earthquakeLayer = new CSVLayer({
-    url: "./earthquake_data_complete1973.csv",
+    url: "./canaryisl.csv",
     elevationInfo: exaggeratedElevation,
     screenSizePerspectiveEnabled: false,
     renderer: {
@@ -133,8 +133,8 @@ require([
           field: "mag",
           axis: "all",
           stops: [
-            { value: 5.5, size: 70000, label: "<15%" },
-            { value: 7, size: 250000, label: "25%" }
+            { value: 1, size: 4000, label: "<15%" },
+            { value: 4, size: 8000, label: "25%" }
           ]
         },
         {
@@ -144,8 +144,8 @@ require([
             title: "Magnitude"
           },
           stops: [
-            { value: 6, color: [254, 240, 217], label: "4.5 - 6" },
-            { value: 7, color: [179, 0, 0], label: ">7" }
+            { value: 1, color: [254, 240, 217], label: "1 - 4" },
+            { value: 4, color: [179, 0, 0], label: ">4" }
           ]
         }
       ]
